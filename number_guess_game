@@ -1,0 +1,39 @@
+
+print("WELCOME TO THE GUESS GAME , WE HAVE HIDDEN A NUMBER (1-50 ), U HAVE TO GUESS IT ")
+print("     WE WILL GIVE U SOME HINTS BUT U ONLY HAVE 5 LIVES , SO BE CAREFUL   ")
+
+fixed=18
+lives=5
+while(True):
+    inp=int(input("ENTER NUMBER : "))
+
+
+
+    if inp>18 :
+        print("NAA, DECREASE THE NUMBER ")
+        lives = lives -1 
+        print("YOU HAVE " , lives , "LIVES LEFT")
+        
+
+        if lives == 0 : 
+            print("GAME OVER")
+            break
+        if lives < 5 : 
+            continue
+                
+
+    elif inp<18 :
+        print("NAA, INCREASE THE NUMBER ")
+        lives = lives -1 
+        print("YOU HAVE " , lives , "LIVES LEFT")
+        if lives == 0 : 
+            print("GAME OVER")
+            break
+        if lives < 5 : 
+            continue
+
+    elif inp==18:
+        print("YES!! U GOT IT RIGHT ")
+        break 
+
+
