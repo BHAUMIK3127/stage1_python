@@ -11,29 +11,24 @@ while(True):
 
     if inp>18 :
         print("NAA, DECREASE THE NUMBER ")
-        lives = lives -1 
+        lives -= 1 
         print("YOU HAVE " , lives , "LIVES LEFT")
         
 
-        if lives == 0 : 
-            print("GAME OVER")
-            break
-        if lives < 5 : 
-            continue
-                
+        
 
     elif inp<18 :
         print("NAA, INCREASE THE NUMBER ")
-        lives = lives -1 
+        lives -= 1
         print("YOU HAVE " , lives , "LIVES LEFT")
-        if lives == 0 : 
-            print("GAME OVER")
-            break
-        if lives < 5 : 
-            continue
+        
 
     elif inp==18:
         print("YES!! U GOT IT RIGHT ")
         break 
 
-
+    if lives == 0 : 
+            print("GAME OVER")
+            break
+    if lives < 5 : 
+            continue 
