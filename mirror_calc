@@ -1,0 +1,40 @@
+
+print("WELCOME TO THE MIRROR CACLULATOR")
+
+print("WHAT DO U WANT TO CALCULATE?")
+print("TYPE 'V' TO CALCULATE IMAGE DISTANCE ")
+print("TYPE 'U' TO CALCULATE OBJECT DISTANCE ")
+print("TYPE 'F' TO CALCULATE FOCAL DISTANCE ")
+
+
+inp=input("ENTER YOUR INPUT.....")
+inp.capitalize()
+
+if inp in ("v" , "V"):
+    objdist=int(input("Enter Object distance..."))
+    fcdist=int(input("Enter Focal distance..."))
+    form2=(fcdist*objdist)/(objdist-fcdist)
+
+    
+if inp in ("u" , "U"):
+    imgdist=int(input("Enter Image distance..."))
+    fcdist=int(input("Enter Focal distance..."))
+    form2=(fcdist*imgdist)/(imgdist-fcdist)
+    print("The object distance is " , form2)
+
+if inp in ("f" , "F"):
+    print(" DO U WANT TO CALCULATE THE FOCAL DISTANCE BY RADIUS OF CURVATURE OF IMG AND OBJ DISTNACE?")
+    print("R FOR RADIUS OF CURVATURE ")
+    print("S FOR IMG AND OBJ DISTANCE ")
+    inp2=input("ENTER INPUT...")
+    if inp2 in ("s" , "S"):
+        imgdist=int(input("Enter Image distance..."))
+        objdist=int(input("Enter object distance..."))
+        form3= (imgdist*objdist) / (objdist+imgdist)
+        print("The focal distance is " , form3)
+
+    if inp2 in ("r","R"):
+        rad = int(input("ENTER RADIUS OF CURVATURE..."))
+        formRAD= rad/2
+        print("The focal distance is " , formRAD)
+
