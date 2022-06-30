@@ -1,19 +1,33 @@
+import sys
 
-print("WELCOME TO THE MIRROR CACLULATOR")
+from time import sleep
+
+words = "WELCOME TO THE MIRROR CACLULATOR\n"
+for char in words:
+    sleep(0.025)
+    sys.stdout.write(char)
+    sys.stdout.flush()
+
 
 print("WHAT DO U WANT TO CALCULATE?")
 print("TYPE 'V' TO CALCULATE IMAGE DISTANCE ")
 print("TYPE 'U' TO CALCULATE OBJECT DISTANCE ")
 print("TYPE 'F' TO CALCULATE FOCAL DISTANCE ")
 
-
-inp=input("ENTER YOUR INPUT.....")
+sent = "ENTER YOUR INPUT....."
+for char in sent:
+    sleep(0.025)
+    sys.stdout.write(char)
+    sys.stdout.flush()
+    
+inp=input()
 inp.capitalize()
 
 if inp in ("v" , "V"):
     objdist=int(input("Enter Object distance..."))
     fcdist=int(input("Enter Focal distance..."))
     form2=(fcdist*objdist)/(objdist-fcdist)
+    print("THE image distance is:" , form2)
 
     
 if inp in ("u" , "U"):
@@ -37,4 +51,3 @@ if inp in ("f" , "F"):
         rad = int(input("ENTER RADIUS OF CURVATURE..."))
         formRAD= rad/2
         print("The focal distance is " , formRAD)
-
